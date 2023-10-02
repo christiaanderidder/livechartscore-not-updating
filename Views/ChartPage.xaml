@@ -18,6 +18,7 @@
                 HorizontalOptions="FillAndExpand"
                 HeightRequest="250"
                 TooltipTextSize="14" />
+            <Label Text="{Binding RefreshCounter}" />
             <Button Text="Refresh" Command="{Binding RefreshCommand}" />
         </VerticalStackLayout>
     </ScrollView>

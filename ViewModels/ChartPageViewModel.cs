@@ -9,12 +9,15 @@ public partial class ChartPageViewModel : ObservableObject
 {
     private readonly Random _random = new ();
 
+    [ObservableProperty] private int _refreshCounter = 0;
+    
     [ObservableProperty] private IEnumerable<ISeries> _data = Enumerable.Empty<ISeries>();
 
     [RelayCommand]
     public Task Refresh()
     {
         Data = new ISeries[] { new LineSeries<int> { Values = GetData() } };
+        RefreshCounter++;
         
         return Task.CompletedTask;
     }

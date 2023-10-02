@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MyMauiApp.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MyMauiApp"
+    xmlns:views="clr-namespace:MyMauiApp.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Title="MyMauiApp">
+
+    <TabBar>
+        <Tab
+            Title="Chart">
+            <ShellContent
+                Title="Chart"
+                ContentTemplate="{DataTemplate views:ChartPage}"
+                Route="ChartPage" />
+        </Tab>
+        <Tab
+            Title="Other">
+            <ShellContent
+                Title="Other"
+                ContentTemplate="{DataTemplate views:OtherPage}"
+                Route="OtherPage" />
+        </Tab>
+    </TabBar>
+
+</Shell>
